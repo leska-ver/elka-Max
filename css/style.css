@@ -1221,6 +1221,10 @@ textarea {
     padding: 0 30px;
   }
 
+  .btn {
+    padding: 12px 14px;
+  }
+
   .modal-сhristmasTree-sps {
     flex-basis: 83%;
   }
@@ -1520,7 +1524,6 @@ textarea {
   }
 
   .hero__btn {
-    padding: 12px 14px;
     max-width: 100%;
   }
 
@@ -1578,10 +1581,13 @@ textarea {
   }
 
   .buy__btn {
-    font-size: 20px;
-    padding: 23px;
+    font-size: 16px;
     max-width: 100%;
     margin: 0 auto;
+  }
+
+  .term-card__button {
+    width: 164px;
   }
 
 
@@ -1643,8 +1649,7 @@ textarea {
   }
 
   .reviews__button {
-    padding: 16px 33px;
-    width: 282px;
+    width: 197px;
   }
 }
 
