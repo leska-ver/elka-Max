@@ -2531,7 +2531,7 @@ textarea {
 
   .modal--order {
     width: 101%;
-    height: 595px;
+    height: 655px;
 }  
 
   .modal--order .simplebar-content {
@@ -2548,6 +2548,15 @@ textarea {
 
   .modal--order .modal__label:not(:last-child) {
     margin-bottom: 22px;
+  }
+
+  .modal--order .modal__label-descr {
+    font-size: 14px;
+  }  
+
+  .modal--order .modal__textarea {
+    padding: 53px 10px 10px;
+    height: 130px;
   }
   
   .modal--order .modal__ord {
