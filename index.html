@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compftible" content="IE=edge">
+  <link rel="shorcut icon" href="img/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Для поиска в сети-->
+  <meta name="description" content="Рады видеть Вас на нашем сайте.">
+  <meta property="og:title" content="Производство искуственных елок и украшений">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="здесь ссылка на сайт">
+  <meta property="og:image" content="img/ogImage.jpg">
+  <meta name="keywords" content="ёлки, нг, доставка, ёлочки, daycare, подарки, купи">
+  <!-- //Для поиска в сети-->
+  <!--Аккордеон тоже самое и для телефона-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!--минифицированный библиотека. для телефона-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <!-- для modal--order -->
+  <script defer="defer" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!-- <script defer="defer" src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+        <script defer="defer" src="./vendor/inputmask.min.js"></script> -->
+  <!--Скроллбар для modal--order-->
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <!--Скроллбар для modal--order-->
+  <script defer="defer" src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <title>Ёлочка</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // для Базы данных timeweb.ru
+    $(function () {
+      $('.form-button').on('click', function () {
+        let data = {
+          'name': $('[name="name"]').val(),
+          'tel': $('[name="tel"]').val(),
+          'email': $('[name="email"]').val(),
+          'message': $('[name="message"]').val()
+        };
+        $.post('mail.php', data, function (response) {
+          if (response == 1) {
+            $('[name="name"]').val('');
+            $('[name="tel"]').val('');
+            $('[name="email"]').val('');
+            $('[name="message"]').val('');
+          }
+        })
+
+        return false;
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1 class="visually-hidden">Я для семантики</h1>
+    <header class="header">
+      <div class="header__container header__container_margin">
+        <!-- Шаблон микс pattern-1440px -->
+        <div class="header__pattern pattern">
+          <a class="pattern__logo" href="#">
+            <img class="pattern__logo-img" src="img/logo.svg" alt="Логотип Ёлочка">
+            <div class="pattern__logo-block">
+              <h2 class="pattern__h2">Елочка, гори!</h2>
+              <p class="pattern__descMyriad desc">
+                Производство искуственных елок и украшений
+              </p>
+            </div>
+          </a>
+          <div class="pattern__contacts">
+            <div class="pattern__contact">
+              <p class="pattern__desc desc">
+                Есть вопросы? Звоните!
+              </p>
+              <div class="pattern__block">
+                <a class="pattern__link" href="tel:8 (800) 200-40-17">8 (800) 200-40-17</a>
+                <a class="pattern__link" href="tel:+7 (499) 404-14-31">+7 (499) 404-14-31</a>
+              </div>
+            </div>
+            <div class=" pattern__contact_grid474">
+              <a class="pattern__linkMail" href="mailto:info@elockagori.ru">info@elockagori.ru</a>
+              <a class="pattern__linkBtn btn" href="tel:8 (800) 200-40-17">ЗАКАЗАТЬ ЗВОНОК</a>
+            </div>
+          </div>
+        </div>
+        <!-- // Шаблон микс pattern-1440px -->
+      </div>
+      <div class="header__block">
+        <div class="header__container">
+          <button class="header__burger burger" id="burger">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+          <div class="header__menu menu" id="menu">
+            <nav class="header__nav">
+              <ul class="header__list">
+                <li class="header__item">
+                  <a class="header__btn header__btn--active" href="index.html" aria-label="Ссылка">Искусственные
+                    елки</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__btn " href="#" aria-label="Ссылка">Живые елки</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__btn " href="#" aria-label="Ссылка">Елочки из конфет</a>
+                </li>
+                <li class="header__item">
+                  <a class="header__btn " href="#" aria-label="Ссылка">Украшение для елок</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__container">
+          <h2 class="hero__h2 h2 color-white255">
+            Используйте все возможности
+          </h2>
+          <h3 class="hero__h3 h3">
+            приближающегося праздника!
+          </h3>
+          <p class="hero__desc desc">
+            Закажите новогодний набор сейчас и получите дополнительную <span>скидку 15%</span> от оптовых цен!
+          </p>
+          <div class="hero__download">
+            <h4 class="hero__h4 h4">
+              Получи оптовые цены сейчас
+            </h4>
+            <form class="hero__form hero__form_js" action="mail.php" enctype="multipart/form-data" method="POST"
+              aria-label="Здесь вы можете оставить свои данные и скачать файл">
+              <input type="hidden" name="admin_email[]" value="lyaisan.333@yandex.ru">
+              <!--darki@yandex.ru-->
+              <input type="hidden" name="form_subject" value="Сообщение из сайта Ёлочка, скачали прайс">
+              <div class="hero__block">
+                <!--data здесь он обрабатывает плагин валидатор кода-->
+                <label class="hero__label" for="name">
+                  <input class="hero__input" type="text" name="name" placeholder="Ваше имя" data-validate-field="name"
+                    id="name" required aria-label="Введите ваше имя" maxlength="10">
+                </label>
+                <label class="hero__label" for="tel">
+                  <input class="hero__input" type="tel" name="tel" placeholder="Ваш телефон" data-validate-field="tel"
+                    data-validate-rules="phone" id="tel" aria-label="Введите ваш телефон">
+                </label>
+              </div>
+              <button class="hero__btn btn">Скачать прайс</button>
+            </form>
+            <div class="hero__сhristmasTree modal-сhristmasTree hero__сhristmasTree_js">
+              <div class="hero__сhristmasTree-sps modal-сhristmasTree-sps hero__сhristmasTree-sps_js">
+                <div class="hero__before modal-before">
+                  <button class="hero__modal-close modal-close hero__modal-close_js" title="Закрыть">
+                    &#10006;
+                  </button>
+                  <h2 class="hero__modal-h2 modal-h2 h2">
+                    Спасибо, мы с вами свяжемся!
+                  </h2>
+                  <a class="hero__btn btn" href="img/land.jpg" download>Скачать прайс</a>
+                </div>
+              </div>
+            </div>
+            <!--Модалка-hero__сhristmasTree-->
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container">
+          <h2 class="about__h2 h2">
+            О нас
+          </h2>
+          <ul class="about__list">
+            <li class="about__item">
+              <div class="about__img">
+                <img src="img/icon-about/about-01.png" alt="icon-1">
+              </div>
+              <div class="about__info">
+                <h3 class="about__h3 h3">
+                  Мы&nbsp;производители
+                </h3>
+                <p class="about__desc desc">
+                  Вы&nbsp;получите гарантию лучших цен
+                </p>
+              </div>
+            </li>
+            <li class="about__item">
+              <div class="about__img">
+                <img src="img/icon-about/about-02.png" alt="icon-2">
+              </div>
+              <div class="about__info">
+                <h3 class="about__h3 h3">
+                  Бесплатная доставка
+                </h3>
+                <p class="about__desc desc">
+                  по&nbsp;всей России
+                </p>
+              </div>
+            </li>
+            <li class="about__item">
+              <div class="about__img">
+                <img src="img/icon-about/about-03.png" alt="icon-3">
+              </div>
+              <div class="about__info">
+                <h3 class="about__h3 h3">
+                  Ниже оптовых цен
+                </h3>
+                <p class="about__desc desc">
+                  конкурентов на&nbsp;17-23%
+                </p>
+              </div>
+            </li>
+            <li class="about__item">
+              <div class="about__img">
+                <img src="img/icon-about/about-04.png" alt="icon-4">
+              </div>
+              <div class="about__info">
+                <h3 class="about__h3 h3">
+                  163000 семей
+                </h3>
+                <p class="about__desc about__desc_padding desc">
+                  встретили 2015 год с&nbsp;нами
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="buy">
+        <div class="buy__container">
+          <h2 class="buy__h2 h2 color-white255">
+            Закажите до&nbsp;10&nbsp;ноября
+          </h2>
+          <p class="buy__desc buy__desc_1920 desc color-white255">
+            на&nbsp;сумму от&nbsp;100&nbsp;000 рублей и&nbsp;получите&nbsp;дополнительную скидку&nbsp;15%
+          </p>
+          <p class="buy__desc buy__desc_474 desc color-white255">
+            на&nbsp;сумму от&nbsp;100&nbsp;000 рублей и получите дополнительную скидку&nbsp;15%
+          </p>
+          <h3 class="buy__h3 h3 color-white255">
+            В&nbsp;декабре скидка&nbsp;5%
+          </h3>
+          <form class="buy__form buy__form_js" action="mail.php" enctype="multipart/form-data" method="POST"
+            aria-label="Здесь вы можете оставить свои данные и скачать файл">
+            <input type="hidden" name="admin_email[]" value="lyaisan.333@yandex.ru">
+            <!--darki@yandex.ru-->
+            <input type="hidden" name="form_subject" value="Сообщение из сайта Ёлочка, Закажите до 10 ноября">
+            <div class="buy__block">
+              <!--data здесь он обрабатывает плагин валидатор кода-->
+              <label class="buy__label" for="nameZ">
+                <input class="buy__input" type="text" name="name" placeholder="Ваше имя" data-validate-field="name"
+                  id="nameZ" required aria-label="Введите ваше имя" maxlength="10">
+              </label>
+              <label class="buy__label" for="telZ">
+                <input class="buy__input" type="tel" name="tel" placeholder="Ваш телефон" data-validate-field="tel"
+                  data-validate-rules="phone" id="telZ" aria-label="Введите ваш телефон">
+              </label>
+            </div>
+            <button class="buy__btn btn">Оставить заявку</button>
+          </form>
+          <div class="buy__сhristmasTree modal-сhristmasTree buy__сhristmasTree_js">
+            <div class="buy__сhristmasTree-sps modal-сhristmasTree-sps buy__сhristmasTree-sps_js">
+              <div class="buy__before modal-before">
+                <button class="buy__modal-close modal-close buy__modal-close_js" title="Закрыть">
+                  &#10006;
+                </button>
+                <h2 class="buy__modal-h2 modal-h2 h2">
+                  Спасибо, мы с вами свяжемся!
+                </h2>
+              </div>
+            </div>
+          </div>
+          <!--Модалка-buy__сhristmasTree-->
+        </div>
+      </section>
+      <section class="score">
+        <div class="score__container">
+          <div class="score__title color-white255">
+            <p>У нас уже заказали:</p> <span><span class="span">1</span><span class="span">5</span></span> человек
+          </div>
+        </div>
+      </section>
+      <section class="set">
+        <div class="set__container">
+          <h2 class="set__h2 h2 color-white255">
+            Наши эффективные наборы
+          </h2>
+          <p class="set__desc desc">
+            Мы&nbsp;разработали для Вас готовые наборы на&nbsp;основе статистики наши
+          </p>
+          <!-- Лайфхак от Жеки. Шаблон микс и модификаторы (_) term-card -->
+          <div class="set__term-card term-card">
+            <ul class="term-card__list">
+              <li class="term-card__item sample-modalJs">
+                <article class="term-card__article">
+                  <div class="term-card__size">
+                    <h3 class="sample-modalH3">Ёлка №1</h3>
+                    <div class="term-card__img-zoom">
+                      <img src="img/icon-term/01.png" alt="Ёлка Zoom">
+                    </div>
+                    <div class="term-card__info">
+                      <div class="term-card__treeInfo">
+                        <div class="term-card__img-small">
+                          <img src="img/icon-term/02.png" alt="Ёлка Small">
+                        </div>
+                        <p class="term-card__quantity">40 см. - 100 шт.</p>
+                      </div>
+                      <div class="term-card__treeInfo">
+                        <div class="term-card__img-small">
+                          <img src="img/icon-term/02.png" alt="Ёлка Small">
+                        </div>
+                        <p class="term-card__quantity">80 см. - 50 шт.</p>
+                      </div>
+                      <div class="term-card__treeInfo">
+                        <div class="term-card__img-small">
+                          <img src="img/icon-term/02.png" alt="Ёлка Small">
+                        </div>
+                        <p class="term-card__quantity">1500 см. - 30 шт.</p>
+                      </div>
+                      <div class="term-card__treeInfo">
+                        <div class="term-card__img-small">
+                          <img src="img/icon-term/02.png" alt="Ёлка Small">
+                        </div>
+                        <p class="term-card__quantity">2000 см. - 50 шт.</p>
+                      </div>
+                      <div class="term-card__text term-card__text_ord">
+                        <p class="term-card__desc desc">Срок реализации - <strong>1 месяц</strong></p>
+                        <p class="term-card__desc desc">Ваша закупка - <strong>1 месяц</strong></p>
+                        <p class="term-card__desc desc">Ваша закупка - <strong>1 месяц</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="term-card__text term-card__text_ordNone">
+                    <p class="term-card__desc desc">Срок реализации - <strong>1 месяц</strong></p>
+                    <p class="term-card__desc desc">Ваша закупка - <strong>1 месяц</strong></p>
+                    <p class="term-card__desc desc">Ваша закупка - <strong>1 месяц</strong></p>
+                  </div>
+                  <button class="term-card__button btn  sample-btnJs" data-modal="order"
+                    aria-label="Нажмите чтобы оставить заявку">Оставить заявку</button>
+                </article>
+              </li>
+              <li class="term-card__item sample-modalJs">
+                <article class="term-card__article">
+                  <div class="term-card__size">
+                    <h3 class="sample-modalH3">Ёлка №2</h3>
+                    <div class="term-card__img-zoom">
+                      <img src="img/icon-term/01.png" alt="Ёлка Zoom">
+                    </div>
+                    <div class="term-card__info">
+                      <div class="term-card__treeInfo">
+                        <div class="term-card__img-small">
+                          <img src="img/icon-term/02.png" alt="Ёлка Small">
+                        </div>
+                        <p class="term-card__quantity">40 см. - 100 шт.</p>
+                      </div>
+                      <div class="term-card__treeInfo">
+                        <div class="term-card__img-small">
+                          <img src="img/icon-term/02.png" alt="Ёлка Small">
+                        </div>
+                        <p class="term-card__quantity">80 см. - 50 шт.</p>
+                      </div>
+                      <div class="term-card__treeInfo">
+                        <div class="term-card__img-small">
+                          <img src="img/icon-term/02.png" alt="Ёлка Small">
+                        </div>
+                        <p class="term-card__quantity">1500 см. - 30 шт.</p>
+                      </div>
+                      <div class="term-card__treeInfo">
+                        <div class="term-card__img-small">
+                          <img src="img/icon-term/02.png" alt="Ёлка Small">
+                        </div>
+                        <p class="term-card__quantity">2000 см. - 50 шт.</p>
+                      </div>
+                      <div class="term-card__text term-card__text_ord">
+                        <p class="term-card__desc desc">Срок реализации - <strong>1 месяц</strong></p>
+                        <p class="term-card__desc desc">Ваша закупка - <strong>1 месяц</strong></p>
+                        <p class="term-card__desc desc">Ваша закупка - <strong>1 месяц</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="term-card__text term-card__text_ordNone">
+                    <p class="term-card__desc desc">Срок реализации - <strong>1 месяц</strong></p>
+                    <p class="term-card__desc desc">Ваша закупка - <strong>1 месяц</strong></p>
+                    <p class="term-card__desc desc">Ваша закупка - <strong>1 месяц</strong></p>
+                  </div>
+                  <button class="term-card__button btn  sample-btnJs" data-modal="order"
+                    aria-label="Нажмите чтобы оставить заявку">Оставить заявку</button>
+                </article>
+              </li>
+            </ul>
+          </div>
+          <!-- // Лайфхак от Жеки. Шаблон микс и модификаторы (_) term-card -->
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="reviews__container">
+          <h2 class="reviews__h2 h2">
+            Отзывы о нас
+          </h2>
+          <ul class="reviews__list">
+            <li class="reviews__item sample-modalJs">
+              <article class="reviews__article">
+                <h3 class="sample-modalH3">Отзыв №1</h3>   
+                <!-- reviews__orld чтобы в модалку перешли стили grid -->
+                <div class="reviews__orld">            
+                  <div class="reviews__img">
+                    <img src="img/adam.png" alt="фото автора отзыва">
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__text reviews__isim desc">Имя:.............</p>
+                    <p class="reviews__text reviews__alici desc">Заказывал:.............</p>
+                    <p class="reviews__text reviews__siparişMiktari desc">Сумма заказа:.............</p>
+                    <p class="reviews__text reviews__yorum desc">
+                      Lorem Ipsum это текст-&laquo;рыба&raquo;, часто используемый в&nbsp;печати
+                      и&nbsp;вэб-дизайне. Lorem Ipsum является стандартной &laquo;рыбой&raquo; для текстов
+                      на&nbsp;латинице с&nbsp;начала XVI&nbsp;века. В&nbsp;то&nbsp;время некий безымянный
+                      печатник создал большую коллекцию размеров и&nbsp;форм шрифтов, используя Lorem Ipsum для
+                      распечатки&nbsp; образцов
+                    </p>
+                  </div>
+                </div> 
+                <button class="reviews__button btn btn_green  sample-btnJs" data-modal="order" aria-label="Нажмите чтобы Заказать этот же набор">
+                  Заказать этот же набор
+                </button>
+              </article>
+            </li>
+            <li class="reviews__item sample-modalJs">
+              <article class="reviews__article">
+                <h3 class="sample-modalH3">Отзыв №2</h3>
+                <!-- reviews__orld чтобы в модалку перешли стили grid -->
+                <div class="reviews__orld">            
+                  <div class="reviews__img">
+                    <img src="img/adam.png" alt="фото автора отзыва">
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__text reviews__isim desc">Имя:.............</p>
+                    <p class="reviews__text reviews__alici desc">Заказывал:.............</p>
+                    <p class="reviews__text reviews__siparişMiktari desc">Сумма заказа:.............</p>
+                    <p class="reviews__text reviews__yorum desc">
+                      Lorem Ipsum это текст-&laquo;рыба&raquo;, часто используемый в&nbsp;печати
+                      и&nbsp;вэб-дизайне. Lorem Ipsum является стандартной &laquo;рыбой&raquo; для текстов
+                      на&nbsp;латинице с&nbsp;начала XVI&nbsp;века. В&nbsp;то&nbsp;время некий безымянный
+                      печатник создал большую коллекцию размеров и&nbsp;форм шрифтов, используя Lorem Ipsum для
+                      распечатки&nbsp; образцов
+                    </p>
+                  </div>
+                </div> 
+                <button class="reviews__button btn btn_green  sample-btnJs" data-modal="order" aria-label="Нажмите чтобы Заказать этот же набор">
+                  Заказать этот же набор
+                </button>
+              </article>
+            </li>
+            <li class="reviews__item sample-modalJs">
+              <article class="reviews__article">
+                <h3 class="sample-modalH3">Отзыв №3</h3>
+                <!-- reviews__orld чтобы в модалку перешли стили grid -->
+                <div class="reviews__orld">            
+                  <div class="reviews__img">
+                    <img src="img/adam.png" alt="фото автора отзыва">
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__text reviews__isim desc">Имя:.............</p>
+                    <p class="reviews__text reviews__alici desc">Заказывал:.............</p>
+                    <p class="reviews__text reviews__siparişMiktari desc">Сумма заказа:.............</p>
+                    <p class="reviews__text reviews__yorum desc">
+                      Lorem Ipsum это текст-&laquo;рыба&raquo;, часто используемый в&nbsp;печати
+                      и&nbsp;вэб-дизайне. Lorem Ipsum является стандартной &laquo;рыбой&raquo; для текстов
+                      на&nbsp;латинице с&nbsp;начала XVI&nbsp;века. В&nbsp;то&nbsp;время некий безымянный
+                      печатник создал большую коллекцию размеров и&nbsp;форм шрифтов, используя Lorem Ipsum для
+                      распечатки&nbsp; образцов
+                    </p>
+                  </div>
+                </div> 
+                <button class="reviews__button btn btn_green  sample-btnJs" data-modal="order" aria-label="Нажмите чтобы Заказать этот же набор">
+                  Заказать этот же набор
+                </button>
+              </article>
+            </li>
+            <li class="reviews__item sample-modalJs">
+              <article class="reviews__article">
+                <h3 class="sample-modalH3">Отзыв №4</h3>
+                <!-- reviews__orld чтобы в модалку перешли стили grid -->
+                <div class="reviews__orld">            
+                  <div class="reviews__img">
+                    <img src="img/adam.png" alt="фото автора отзыва">
+                  </div>
+                  <div class="reviews__info">
+                    <p class="reviews__text reviews__isim desc">Имя:.............</p>
+                    <p class="reviews__text reviews__alici desc">Заказывал:.............</p>
+                    <p class="reviews__text reviews__siparişMiktari desc">Сумма заказа:.............</p>
+                    <p class="reviews__text reviews__yorum desc">
+                      Lorem Ipsum это текст-&laquo;рыба&raquo;, часто используемый в&nbsp;печати
+                      и&nbsp;вэб-дизайне. Lorem Ipsum является стандартной &laquo;рыбой&raquo; для текстов
+                      на&nbsp;латинице с&nbsp;начала XVI&nbsp;века. В&nbsp;то&nbsp;время некий безымянный
+                      печатник создал большую коллекцию размеров и&nbsp;форм шрифтов, используя Lorem Ipsum для
+                      распечатки&nbsp; образцов
+                    </p>
+                  </div>
+                </div> 
+                <button class="reviews__button btn btn_green  sample-btnJs" data-modal="order" aria-label="Нажмите чтобы Заказать этот же набор">
+                  Заказать этот же набор
+                </button>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <!-- Шаблон микс pattern-1440px  -->
+        <div class="footer__pattern pattern">
+          <a class="pattern__logo" href="#">
+            <img class="pattern__logo-img" src="img/logo.svg" alt="Логотип Ёлочка">
+            <div class="pattern__logo-block">
+              <h2 class="pattern__h2">Елочка, гори!</h2>
+              <p class="pattern__descMyriad desc">
+                Производство искуственных елок и украшений
+              </p>
+            </div>
+          </a>
+          <div class="pattern__contacts">
+            <div class="pattern__contact">
+              <p class="pattern__desc desc">
+                Есть вопросы? Звоните!
+              </p>
+              <div class="pattern__block">
+                <a class="pattern__link" href="tel:8 (800) 200-40-17">8 (800) 200-40-17</a>
+                <a class="pattern__link" href="tel:+7 (499) 404-14-31">+7 (499) 404-14-31</a>
+              </div>
+            </div>
+            <div class="pattern__contact_grid474">
+              <a class="pattern__linkMail" href="mailto:info@elockagori.ru">info@elockagori.ru</a>
+              <a class="pattern__linkBtn btn" href="tel:8 (800) 200-40-17">ЗАКАЗАТЬ ЗВОНОК</a>
+            </div>
+          </div>
+        </div>
+        <!-- // Шаблон микс pattern-1440px -->
+      </div>
+    </footer>
+    <div class="modals">
+      <div class="modal__overlay"></div>
+      <!-- modal-Модальное окно СПАСИБО-шаблон -->
+      <div class="modal__thanks modal__thanks_js">
+        <div class="modal__sps modal__sps_js">
+          <div class="modal__before modal-before">
+            <button class="modal__close modal__close_js modal-close" title="Закрыть">
+              &#10006;
+            </button>
+            <h2 class="modal__h2 modal-h2 h2">
+              Товар будет отправлен на указанную Вами почту.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <!-- // modal-Модальное окно СПАСИБО-шаблон -->
+      <div class="modal modal--order" data-modal-open="order" data-simplebar>
+        <button class="close__mobile btn--reset for-mobile" aria-label="Закрыть окно" data-swipe-treshold="20"
+          data-swipe-timeout="500" data-swipe-ignore="false"></button>
+        <button class="modal__close">x</button>
+        <h2 class="modal__h2 h2">Бронирование заказа</h2>
+        <div class="tariff"></div>
+        <form class="modal__form modal__form_js" action="mail.php" enctype="multipart/form-data" method="POST"
+          aria-label="Здесь Вы можете заказать товар">
+          <input type="hidden" name="admin_email[]" value="lyaisan.333@yandex.ru">
+          <!--darki@yandex.ru-->
+          <input type="hidden" name="admin_email[]" value="kussa90-03@mail.ru">
+          <input type="hidden" name="form_subject" value="Сообщение из сайта Ёлочка, заказ">
+          <div class="modal__block">
+            <!--data здесь он обрабатывает плагин валидатор кода-->
+            <label class="modal__label" for="nameZakaz">
+              <input class="modal__input" type="text" name="name" placeholder="Фамилия и Имя" data-validate-field="name"
+                id="nameZakaz" required="" aria-label="Введите ваше Фамилию и Имя" maxlength="20">
+            </label>
+            <label class="modal__label" for="telZakaz">
+              <input class="modal__input" type="tel" name="tel" placeholder="Ваш телефон" data-validate-field="tel"
+                data-validate-rules="phone" id="telZakaz" aria-label="Введите ваш телефон">
+            </label>
+            <label class="modal__label" for="emailZakaz">
+              <input class="modal__input" type="email" name="email" placeholder="Email" data-validate-field="email"
+                id="emailZakaz" aria-label="Введите вашу почту" maxlength="35">
+            </label>
+            <label class="modal__label" for="messageZakaz">
+              <span class="modal__label-descr">Напишите через запятую: адрес места жительства, название товара, размер,
+                количество.</span>
+              <textarea class="modal__textarea" type="message" name="message" id="messageZakaz"
+                data-validate-field="text"></textarea>
+            </label>
+          </div>
+          <div class="modal__form-btn">
+            <button class="modal__button btn">Заказать</button>
+            <div class="modal__policy">
+              Нажимая на кнопку, вы соглашаетесь с нашей
+              <a href="https://rocket-telecom.ru/wp-content/uploads/2023/06/politika-v-otnoshenii-obrabotki-personalnyh-dannyh-rtcz.pdf?ysclid=lnygqc4a8t42508700"
+                target="_blank">политикой обработки персональных данных</a>
+              <!-- href="land.pdf" -->
+            </div>
+          </div>
+        </form>
+        <div class="modal__ord">
+          <!-- Инфо о Ёлке в модалке -->
+        </div>
+        <div class="modal__bottom">
+          <div class="">
+            <!-- <img src="/img/manager.png" aria-hidden="true" alt="Менеджер"> -->
+          </div>
+          <div class="modal__text">
+            Остались вопросы? Свяжитесь со мной любым удобным способом:
+            <a href="tel:88002004017">8 (800) 200-40-17</a> или <a href="mailto:info@.mail">info@.mail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--Аккордеон тоже самое и для телефона-->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <!--минифицированный библиотека. для телефона-->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+  <!--Маска формы input-ов-->
+  <script src="js/inputmask.min.js"></script>
+  <!--Валидатор input-ов-->
+  <script src="js/just-validate.js"></script>
+
+  <script src="js/elka.js"></script>
+  <script src="js/buy.js"></script>
+  <script src="js/modal-shablone.js"></script>
+</body>
+
+</html>
