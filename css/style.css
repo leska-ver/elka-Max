@@ -1151,6 +1151,21 @@ textarea {
   max-width: 100%;
 }
 
+@media (max-width: 1600px) {
+  .reviews__list {
+    -webkit--gap: 40px;
+    -moz--gap: 40px;
+    gap: 40px;
+  }
+
+  .reviews__orld {
+    -webkit-grid-template-columns: 111px 1fr;
+    -o-grid-template-columns: 111px 1fr;
+    -moz-grid-template-columns: 111px 1fr;
+    -ms-grid-template-columns: 111px 1fr;
+    grid-template-columns: 111px 1fr;
+  }
+}
 
 @media (max-width: 1050px) {
   .about__item {
