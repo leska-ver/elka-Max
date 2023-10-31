@@ -282,7 +282,7 @@ textarea {
   right: 60px;
   border: 1px solid transparent; 
   /*clamp() - резина размера шрифта*/
-  font-size: clamp(18px, 3vw, 25px);
+  font-size: clamp(14px, 3vw, 25px);
   color: var(--color-limeade);
   background-color: transparent;
   -webkit-transition: color .4s ease-in-out, background-color .4s ease-in-out;
@@ -803,12 +803,6 @@ textarea {
   margin-bottom: 40px;
 }
 
-/*Для формы отправки*/
-.hero__label {
-  position: relative;
-}
-/* // Для формы отправки*/
-
 .hero__input {
   padding: 16px;
   border-radius: 5px;
@@ -858,11 +852,6 @@ textarea {
   vertical-align: middle;
 }
 
-.hero__modal-h2 {
-  margin-top: 0;
-  margin-bottom: 70px;
-}
-
 .hero__сhristmasTree_js {
   visibility: hidden;
   opacity: 0;
@@ -891,8 +880,9 @@ textarea {
   display: flex;
 }
 
-.modal-before {  
-  background-color: var(--color-white);
+.hero__before {
+  padding: 100px 62px;
+  width: 100%;
 }
 /*** // modal-Модальное окно***/
 /*** // hero-1920px***/
@@ -1972,12 +1962,12 @@ textarea {
     line-height: 1;
   }  
 
-  .hero__modal-h2 {
-    margin-bottom: 40px;
-  }
-
   .hero__btn {
     max-width: 100%;
+  }
+
+  .hero__before {
+    padding: 70px 35px;
   }
 
 
@@ -2234,7 +2224,7 @@ textarea {
     margin-bottom: 10px;
   }
 
-  .template-card__list, .candies__card .template-card__list {
+  .template-card__list {
     display: block;
     margin: 0 auto;
     width: 300px;
@@ -2306,12 +2296,14 @@ textarea {
   }
 
   .hero__block {
-    display: block;
+    display: flex;
     margin-bottom: 14px;
+    flex-direction: column;
   }  
 
-  .hero__input {
-    margin-bottom: 15px;
+  .hero__label .js-validate-error-label {
+    position: absolute;
+    top: -17px;
   }
 
 
@@ -2366,6 +2358,13 @@ textarea {
   .reviews__button {
     margin-left: 0;
     width: 100%;
+  }
+
+
+  .candies__card .template-card__list {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
   }
 
 
