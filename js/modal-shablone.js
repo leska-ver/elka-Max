@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
   let $window = window,
       $modalOpenButton = document.querySelectorAll('.sample-btnJs'),
       $modals = document.querySelector('.modals'),
-      $modalClose = document.querySelectorAll('.modal__close'),
+      $modalClose = document.querySelectorAll('.closeX'),
       $modal = document.querySelectorAll('.modal'),
-      $modalOverlay = document.querySelector('.modal__overlay'),
+      $modalOverlay = document.querySelector('.modals__overlay'),
       $mobileOverlay = document.querySelector('.mobile--overlay');   
 
   // отключить включение прокрутки BODY
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // Закрывашка в мобильной версии //
-  let closeMobile = document.querySelectorAll('.close__mobile');
+  let closeMobile = document.querySelectorAll('.modal__close-mobile');
   closeMobile.forEach(function (el) {
     el.addEventListener('click', function (e) {
       console.log('Down!');
@@ -137,23 +137,23 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  /* --------------//- Елки закажи Шаблон модалки - modal--order + Валидация -//---------------- */
+  /* --------------//- Елки закажи Шаблон модалки - modal-order + Валидация -//---------------- */
 
-  // Елки закажи Шаблон модалки - modal--order
-  const btnCloseBuyZ = document.querySelector('.modal__close_js');
-  const modalBuyZ = document.querySelector('.modal__thanks_js');
+  // Елки закажи Шаблон модалки - modal-order
+  const btnCloseBuyZ = document.querySelector('.closeX_js');
+  const modalBuyZ = document.querySelector('.modals__thanks_js');
   if (modalBuyZ) {
     btnCloseBuyZ.addEventListener('click', function () {
-      document.querySelector('.modal__thanks_js').classList.toggle('modal__thanks_js_active');
+      document.querySelector('.modals__thanks_js').classList.toggle('modals__thanks_js_active');
     });
     modalBuyZ.addEventListener('click', function (event) {
       if (event._notClick) return;
-      modalBuyZ.classList.remove('modal__thanks_js_active');
-      document.querySelector('.modal__sps_js').classList.remove('modal__sps_js_active');
+      modalBuyZ.classList.remove('modals__thanks_js_active');
+      document.querySelector('.modals__sps_js').classList.remove('modals__sps_js_active');
     });    
   }
 
-  // inputmask - Телефон/modal--order
+  // inputmask - Телефон/modal-order
   const formJsZ = document.querySelector('.modal__form_js');
   if (formJsZ) { // Обёртка if. Спасение Gulp-а от null в браузере
     const telSelector = formJsZ.querySelector('input[type="tel"]');
@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // }
       },
 
-      //*отправка формы modal--order*/
+      //*отправка формы modal-order*/
       submitHandler: function (thisForm) {
         let formData = new FormData(thisForm);
         let xhr = new XMLHttpRequest();
@@ -229,8 +229,8 @@ document.addEventListener('DOMContentLoaded', function() {
         xhr.open('POST', 'mail.php', 'list.php', true);
         xhr.send(formData);
         thisForm.reset();
-        document.querySelector('.modal__thanks_js').classList.toggle('modal__thanks_js_active');
-        document.querySelector('.modal__sps_js').classList.toggle('modal__sps_js_active');
+        document.querySelector('.modals__thanks_js').classList.toggle('modals__thanks_js_active');
+        document.querySelector('.modals__sps_js').classList.toggle('modals__sps_js_active');
       }
     })
   }
