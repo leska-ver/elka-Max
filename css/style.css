@@ -2234,7 +2234,7 @@ textarea {
     margin-bottom: 10px;
   }
 
-  .template-card__list {
+  .template-card__list, .candies__card .template-card__list {
     display: block;
     margin: 0 auto;
     width: 300px;
