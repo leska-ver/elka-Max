@@ -623,7 +623,7 @@ textarea {
   padding: 0;
 }
 
-.template-card__item {
+.template-card__subitem {
   font-size: 14px;
   line-height: 1.2;
   text-align: center;
@@ -2225,6 +2225,11 @@ textarea {
     font-size: 13.5px;
   }
 
+  .term-card__item {
+    width: 85%;
+    margin: 0 auto 25px;
+  }
+
   .term-card__img-zoom {
     margin-bottom: 10px;
   }
@@ -2232,15 +2237,19 @@ textarea {
   .template-card__list {
     display: block;
     margin: 0 auto;
-    width: 220px;
+    width: 300px;
   }
 
   .template-card__item:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
-  .template-card__img img {
-    width: 200px;
+  .template-card__orld {
+    margin-bottom: 15px;
+  }  
+
+  .template-card__h4, .template-card__desc {
+    width: 100%;
   }
 
 
