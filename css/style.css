@@ -124,9 +124,11 @@ textarea {
   line-height: 1;
   color: var(--color-white);
   text-align: center;
-  background-image: -moz-linear-gradient( 90deg, rgb(100,0,0) 3%, rgb(140,2,2) 5%, rgb(227,0,0) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(100,0,0) 3%, rgb(140,2,2) 5%, rgb(227,0,0) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(100,0,0) 3%, rgb(140,2,2) 5%, rgb(227,0,0) 100%);
+  background: -moz-linear-gradient( 0deg, #8e0202 3%, #a20202 2%, #fc0707 83%);/*Лиса*/
+  background: -webkit-linear-gradient( 0deg, #8e0202 3%, #a20202 2%, #fc0707 83%);/*Safari и Chrome*/
+  background: -ms-linear-gradient( 0deg, #8e0202 3%, #a20202 2%, #fc0707 83%);/*Internet Explorer*/
+  background: -o-linear-gradient( 0deg, #8e0202 3%, #a20202 2%, #fc0707 83%);/*Опера*/
+  background: linear-gradient( 0deg, #8e0202 3%, #a20202 2%, #fc0707 83%);/*Гугл в Gulp-e работает*/
   box-shadow: 0px 5px 10px 0px rgba(0, 1, 3, 0.17);
   cursor: pointer;
   text-transform: uppercase;   
@@ -143,7 +145,11 @@ textarea {
 }
 
 .btn:hover {
-  background: linear-gradient(0deg, var(--color-doveGray) 3%, #7a7676 5%, #a9a5a5 100%);
+  background: -moz-linear-gradient(0deg, var(--color-doveGray) 3%, #7a7676 5%, #a9a5a5 100%);/*Лиса*/
+  background: -webkit-linear-gradient(0deg, var(--color-doveGray) 3%, #7a7676 5%, #a9a5a5 100%);/*Safari и Chrome*/
+  background: -ms-linear-gradient(0deg, var(--color-doveGray) 3%, #7a7676 5%, #a9a5a5 100%);/*Internet Explorer*/
+  background: -o-linear-gradient(0deg, var(--color-doveGray) 3%, #7a7676 5%, #a9a5a5 100%);/*Опера*/
+  background: linear-gradient(0deg, var(--color-doveGray) 3%, #7a7676 5%, #a9a5a5 100%);/*Гугл в Gulp-e работает*/
 }
 
 .btn:active {
@@ -151,9 +157,11 @@ textarea {
 }
 
 .btn_green {
-  background-image: -moz-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
+  background: -moz-linear-gradient( 0deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Лиса*/
+  background: -webkit-linear-gradient( 0deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Safari и Chrome*/
+  background: -ms-linear-gradient( 0deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Internet Explorer*/
+  background: -o-linear-gradient( 0deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Опера*/
+  background: linear-gradient( 0deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Гугл в Gulp-e работает*/
 }
 
 .wrapper {
@@ -198,12 +206,6 @@ textarea {
   font-weight: 700;
   font-size: clamp(14px, 4vw, 30px);
 } 
-
-.h5 { 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 22px;
-}
 
 .desc {
   font-weight: 700;
@@ -442,7 +444,7 @@ textarea {
   display: block;
   margin: 0 0 11px auto;
   border: 2px solid transparent;
-  width: 120px;
+  width: 121px;
   font-size: 14px;
   color: var(--color-limeadeA);
   -webkit-transition: color .4s ease-in-out, color .4s ease-in-out;
@@ -490,7 +492,7 @@ textarea {
 }
 
 .term-card__item {
-  padding: 30px 46px 28px 65px;
+  padding: 30px 42px 28px 65px;
   background-color: var(--color-white);
 }
 
@@ -591,7 +593,7 @@ textarea {
 
 .template-card__orld {
   margin-bottom: 21px;
-  padding: 12px 12px 24px;
+  padding: 12px 12px 28px;
   background-color: var(--color-white);
 }
 
@@ -600,7 +602,7 @@ textarea {
 }
 
 .template-card__info {
-  padding: 0 10px;
+  padding: 0 9px;
 }
 
 .template-card__h4 {
@@ -757,7 +759,11 @@ textarea {
   /*clamp() - резина размера шрифта*/
   font-size: clamp(18px, 4vw, 50px);
   line-height: 1;
-  background: linear-gradient(0deg, #3a9702 0%, #44b400 100%);
+  background: -moz-linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Лиса*/
+  background: -webkit-linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Safari и Chrome*/
+  background: -ms-linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Internet Explorer*/
+  background: -o-linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Опера*/
+  background: linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Гугл в Gulp-e работает*/
 }
 
 .hero__h3 {
@@ -765,7 +771,11 @@ textarea {
   padding: 10px 0;
   width: 80%;
   color: var(--color-white);
-  background: linear-gradient(0deg, #3a9702 0%, #44b400 100%);
+  background: -moz-linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Лиса*/
+  background: -webkit-linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Safari и Chrome*/
+  background: -ms-linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Internet Explorer*/
+  background: -o-linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Опера*/
+  background: linear-gradient(0deg, #3a9702 0%, #44b400 100%);/*Гугл в Gulp-e работает*/
   text-transform: uppercase;  
 }
 
@@ -1282,7 +1292,7 @@ textarea {
 
 /*** artificial(Каталог искусственных елок) 1920px***/
 .artificial {
-  padding: 41px 0 80px;
+  padding: 41px 0 81px;
   background: url("../img/elka-fon04.jpg") center / cover no-repeat;
 }
 
@@ -1294,7 +1304,7 @@ textarea {
 
 /*** alive(Каталог живых елок) 1920px***/
 .alive {
-  padding: 41px 0 80px;
+  padding: 41px 0 83px;
   background-color: var(--color-rgb244);
 }
 
@@ -1304,9 +1314,11 @@ textarea {
 /*** // alive(Каталог живых елок) 1920px***/
 
 
-/*** artificial(Каталог искусственных елок) 1920px***/
+/*** candies(Каталог елочек из конфет) 1920px***/
 .candies {
-  padding: 41px 0 80px;
+  padding: 41px 0 84px;
+  /*В Галпе
+  padding: 41px 0 64px;*/
   background: url("../img/elka-fon05.jpg") center / cover no-repeat;
 }
 
@@ -1323,7 +1335,7 @@ textarea {
   margin: 0 auto 0 83px;
   width: 700px;
 }
-/*** artificial(Каталог искусственных елок) 1920px***/
+/*** // candies(Каталог елочек из конфет) 1920px***/
 
 /*** decoration(Каталог украшений для елок) 1920px***/
 .decoration {
@@ -1337,7 +1349,7 @@ textarea {
 /*** // decoration(Каталог украшений для елок) 1920px***/
 
 
-/***Контакты-contacts***/
+/***Контакты-contacts 1920px***/
 .contacts {
   position: relative;
   background: url("../img/map.jpg") center / cover no-repeat;
@@ -1502,6 +1514,7 @@ textarea {
   font-size: clamp(21px, 3vw, 25px);
   line-height: 1.2;
 }
+/*** // Контакты-contacts 1920px***/
 
 
 /*** footer(Подвал) 1920px***/
@@ -1588,8 +1601,9 @@ textarea {
   .set__desc {
     letter-spacing: 1px;
   }
-
   
+
+  /*1050px*/
   .reviews__orld {
     display: block;
   }
@@ -1733,7 +1747,11 @@ textarea {
     top: 30px;
     right: 36px;
     display: block;
-    background: linear-gradient(0deg, var(--color-limeade) 3%, var(--color-limeadeA) 5%, #5ad310 100%);
+    background: -moz-linear-gradient(0deg, var(--color-limeade) 3%, var(--color-limeadeA) 5%, #5ad310 100%);/*Лиса*/
+    background: -webkit-linear-gradient(0deg, var(--color-limeade) 3%, var(--color-limeadeA) 5%, #5ad310 100%);/*Safari и Chrome*/
+    background: -ms-linear-gradient(0deg, var(--color-limeade) 3%, var(--color-limeadeA) 5%, #5ad310 100%);/*Internet Explorer*/
+    background: -o-linear-gradient(0deg, var(--color-limeade) 3%, var(--color-limeadeA) 5%, #5ad310 100%);/*Опера*/
+    background: linear-gradient(0deg, var(--color-limeade) 3%, var(--color-limeadeA) 5%, #5ad310 100%);/*Гугл в Gulp-e работает*/
     outline-offset: 8px;
     z-index: 17;
     -webkit-transition: background .4s ease-in-out;
@@ -1748,7 +1766,11 @@ textarea {
   }
 
   .burger:hover {
-    background: linear-gradient(0deg, #640000 3%, #8c0202 5%, #e30000 100%);
+    background: -moz-linear-gradient(0deg, #640000 3%, #8c0202 5%, #e30000 100%);/*Лиса*/
+    background: -webkit-linear-gradient(0deg, #640000 3%, #8c0202 5%, #e30000 100%);/*Safari и Chrome*/
+    background: -ms-linear-gradient(0deg, #640000 3%, #8c0202 5%, #e30000 100%);/*Internet Explorer*/
+    background: -o-linear-gradient(0deg, #640000 3%, #8c0202 5%, #e30000 100%);/*Опера*/
+    background: linear-gradient(0deg, #640000 3%, #8c0202 5%, #e30000 100%);/*Гугл в Gulp-e работает*/
   }
 
   .burger:active {
@@ -1856,7 +1878,6 @@ textarea {
     left: 7px;
     width: 25px;
     height: 3px;
-    /* background-color: var(--color-white); */
   }
 
   .burger.open:focus .burger__line:nth-child(1),
@@ -2034,7 +2055,7 @@ textarea {
     padding: 5px 8px;
   }    
 
-  
+  /*787px*/
   .reviews {
     padding: 32px 0 16px;
   }
@@ -2119,6 +2140,7 @@ textarea {
   }
 
   
+  /*676px*/
   .reviews__list {
     display: block;
   }
@@ -2355,6 +2377,7 @@ textarea {
   }
 
 
+	/*515px*/
   .reviews__button {
     margin-left: 0;
     width: 100%;
@@ -2462,9 +2485,11 @@ textarea {
   /*На компе и в css работает*/
   width: 7px;
   height: 70px;
-  background-image: -moz-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
+  background: -moz-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Лиса*/
+  background: -webkit-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Safari и Chrome*/
+  background: -ms-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Internet Explorer*/
+  background: -o-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Опера*/
+  background: linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Гугл в Gulp-e работает*/
   /* opacity: 1; */
 }
 /*--- // Скроллбар для modal-order---*/
@@ -2596,9 +2621,6 @@ textarea {
   padding: 23px 29.5% 18px;
   width: 154px;
   font-size: clamp(14px, 5vw, 20px);
-  background-image: -moz-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
 }
 
 .modal__policy {
@@ -2917,9 +2939,11 @@ textarea {
 .modal-order .modal__btn {
   padding: 23px 29.5% 18px;
   font-size: clamp(14px, 5vw, 20px);
-  background-image: -moz-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);
+  background: -moz-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Лиса*/
+  background: -webkit-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Safari и Chrome*/
+  background: -ms-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Internet Explorer*/
+  background: -o-linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Опера*/
+  background: linear-gradient( 90deg, rgb(45,119,0) 3%, rgb(60,155,2) 5%, rgb(68,179,0) 100%);/*Гугл в Gulp-e работает*/
 }
 /*--- // Телефон валидация и маска---*/
 
