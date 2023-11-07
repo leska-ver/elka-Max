@@ -9,4 +9,4 @@
 
 ```
 
-https://leska-ver.github.io/elka-Max/app/index.html
+https://leska-ver.github.io/elka-Max/
