@@ -3191,8 +3191,7 @@ textarea {
 
 @media (max-width: 515px) {
   .modal-order .js-validate-error-label {
-    top: -14px;
-    font-size: 11px;
+    font-size: 9px;
   }
 }
 
