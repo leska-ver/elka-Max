@@ -346,10 +346,10 @@ textarea {
 .pattern__logo {
   display: -ms-grid;
   display: grid;
-  -webkit-grid-template-columns: 60px, 200px;
-  -o-grid-template-columns: 60px, 200px;
-  -moz-grid-template-columns: 60px, 200px;
-  -ms-grid-template-columns: 60px, 200px;
+  -webkit-grid-template-columns: 60px 200px;
+  -o-grid-template-columns: 60px 200px;
+  -moz-grid-template-columns: 60px 200px;
+  -ms-grid-template-columns: 60px 200px;
   grid-template-columns: 60px 200px;
   -webkit--gap: 23px;
   -moz--gap: 23px;
@@ -508,10 +508,10 @@ textarea {
   -webkit--gap: 20px;
   -moz--gap: 20px;
   gap: 0 69px;
-  -webkit-grid-template-columns: repeat(2, 1fr);
-  -o-grid-template-columns: repeat(2, 1fr);
-  -moz-grid-template-columns: repeat(2, 1fr);
-  -ms-grid-template-columns: repeat(2, 1fr);
+  -webkit-grid-template-columns: 132px 1fr;
+  -o-grid-template-columns: 132px 1fr;
+  -moz-grid-template-columns: 132px 1fr;
+  -ms-grid-template-columns: 132px 1fr;
   grid-template-columns: 132px 1fr;
   padding: 0;
 }
@@ -1458,10 +1458,10 @@ textarea {
 .contacts__block {
   display: -ms-grid;
   display: grid;
-  -webkit-grid-template-columns: 30px, 208px;
-  -o-grid-template-columns: 30px, 208px;
-  -moz-grid-template-columns: 30px, 208px;
-  -ms-grid-template-columns: 30px, 208px;
+  -webkit-grid-template-columns: 30px 208px;
+  -o-grid-template-columns: 30px 208px;
+  -moz-grid-template-columns: 30px 208px;
+  -ms-grid-template-columns: 30px 208px;
   grid-template-columns: 30px 208px;
   -webkit--gap: 23px;
   -moz--gap: 23px;
@@ -1481,10 +1481,10 @@ textarea {
 .contacts__link {
   display: -ms-grid;
   display: grid;
-  -webkit-grid-template-columns: 30px, 1fr;
-  -o-grid-template-columns: 30px, 1fr;
-  -moz-grid-template-columns: 30px, 1fr;
-  -ms-grid-template-columns: 30px, 1fr;
+  -webkit-grid-template-columns: 30px 1fr;
+  -o-grid-template-columns: 30px 1fr;
+  -moz-grid-template-columns: 30px 1fr;
+  -ms-grid-template-columns: 30px 1fr;
   grid-template-columns: 30px 1fr;
   -webkit--gap: 23px;
   -moz--gap: 23px;
@@ -1650,10 +1650,10 @@ textarea {
   }
 
   .contacts__block {
-    -webkit-grid-template-columns: 30px, 1fr;
-    -o-grid-template-columns: 30px, 1fr;
-    -moz-grid-template-columns: 30px, 1fr;
-    -ms-grid-template-columns: 30px, 1fr;
+    -webkit-grid-template-columns: 30px 1fr;
+    -o-grid-template-columns: 30px 1fr;
+    -moz-grid-template-columns: 30px 1fr;
+    -ms-grid-template-columns: 30px 1fr;
     grid-template-columns: 30px 1fr;
     -webkit--gap: 15px;
     -moz--gap: 15px;
@@ -2098,10 +2098,10 @@ textarea {
 
 
   .footer__pattern .pattern__logo {
-    -webkit-grid-template-columns: 50px, 1fr;
-    -o-grid-template-columns: 50px, 1fr;
-    -moz-grid-template-columns: 50px, 1fr;
-    -ms-grid-template-columns: 50px, 1fr;
+    -webkit-grid-template-columns: 50px 1fr;
+    -o-grid-template-columns: 50px 1fr;
+    -moz-grid-template-columns: 50px 1fr;
+    -ms-grid-template-columns: 50px 1fr;
     grid-template-columns: 50px 1fr;
     align-items: center;
     margin: 0 auto 10px;
@@ -2188,10 +2188,10 @@ textarea {
   }
 
   .pattern__logo {
-    -webkit-grid-template-columns: 50px, 174;
-    -o-grid-template-columns: 50px, 174;
-    -moz-grid-template-columns: 50px, 174;
-    -ms-grid-template-columns: 50px, 174;
+    -webkit-grid-template-columns: 50px 174px;
+    -o-grid-template-columns: 50px 174px;
+    -moz-grid-template-columns: 50px 174px;
+    -ms-grid-template-columns: 50px 174px;
     grid-template-columns: 50px 174px;
   }
 
@@ -2393,10 +2393,10 @@ textarea {
 
 
   .footer__pattern .pattern__logo {
-    -webkit-grid-template-columns: 50px, 177px;
-    -o-grid-template-columns: 50px, 177px;
-    -moz-grid-template-columns: 50px, 177px;
-    -ms-grid-template-columns: 50px, 177px;
+    -webkit-grid-template-columns: 50px 177px;
+    -o-grid-template-columns: 50px 177px;
+    -moz-grid-template-columns: 50px 177px;
+    -ms-grid-template-columns: 50px 177px;
     grid-template-columns: 50px 177px;
     align-items: inherit;
     margin: 0 0 10px;
